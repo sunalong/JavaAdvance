@@ -40,10 +40,12 @@ public class DeviceDomain {
 
     @Override
     public String toString() {
-        return "DeviceDomain{" +
-                "number=" + number +
-                " have=" + have +
-                " name='" + name + '\'' +
-                '}';
+//        return "DeviceDomain{" +
+//                "number=" + number +
+//                " have=" + have +
+//                " name='" + name + '\'' +
+//                '}';
+
+        return name;
     }
 }

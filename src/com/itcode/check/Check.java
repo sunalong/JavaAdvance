@@ -18,18 +18,28 @@ public class Check {
 
     public static void main(String[] args) {
         List<DeviceDomain> weHaveList = txt2String(weHave);
-        System.out.println("------------1----------------------");
-        printList(weHaveList);
+//        System.out.println("------------1----------------------");
+//        printList(weHaveList);
         List<DeviceDomain> haveParamsList = txt2String(haveParams);
-        System.out.println("--------------2--------------------");
-        printList(haveParamsList);
+//        System.out.println("--------------2--------------------");
+//        printList(haveParamsList);
         System.out.println("---------------3-------------------");
+        int countHava =0;
+        int countNo =0;
         for (int i = 0; i < haveParamsList.size(); i++) {
             for (int j = 0; j < weHaveList.size(); j++) {
                 if (weHaveList.get(j).getName().equals(haveParamsList.get(i).getName())) {
                     weHaveList.get(j).setHave(true);
-                    System.out.println("存在：" + weHaveList.get(j));
+                    System.out.println((++countHava)+"  参数存在：" + weHaveList.get(j));
+
                 }
+            }
+        }
+        System.out.println("---------------4-------------------");
+        for(int i=0;i<weHaveList.size();i++){
+            if(!weHaveList.get(i).isHave()){
+//                System.out.println((++countNo)+"  参数不存在：" + weHaveList.get(i));
+                System.out.println((++countNo)+"  " + weHaveList.get(i));
             }
         }
 
